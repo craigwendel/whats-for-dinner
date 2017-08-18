@@ -1,0 +1,23 @@
+#main-nav {
+  height: 5em;
+  background-color: #fff;
+}
+.link-flex {
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+.link-flex li {
+  list-style: none;
+  color: #16a085;
+}
+img {
+  width: 5vw;
+}
+
+footer {
+  background-color: #16a085;
+  color: #fff;
+}
