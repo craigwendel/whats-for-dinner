@@ -13,10 +13,10 @@ export default class BaseLayout extends Component {
             <h3>What's For Dinner?</h3>
           </div>
           <ul className='nav-ul'>
-            <NavLink to='/recipes' activeStyle={{color: '#27ae60'}}><li>Recipes</li></NavLink>
-            <NavLink to='/menu' activeStyle={{color: '#27ae60'}}><li>Your Menu</li></NavLink>
-            <NavLink to='/login' activeStyle={{color: '#27ae60'}}><li>Log In</li></NavLink>
-            <NavLink to='/signup' style={{backgroundColor: '#27ae60', color: '#fff', padding: '1%', borderRadius: '10px'}}><li>Sign Up</li></NavLink>
+            <NavLink to='/recipes' activeStyle={{color: '#16a085'}}><li>Search Recipes</li></NavLink>
+            <NavLink to='/menu' activeStyle={{color: '#16a085'}}><li>Your Menu</li></NavLink>
+            <NavLink to='/login' activeStyle={{color: '#16a085'}}><li>Log In</li></NavLink>
+            <NavLink to='/signup' style={{backgroundColor: '#16a085', color: '#fff', padding: '1% 2%', width: '10%', borderRadius: '10px', textAlign: 'center'}}><li>Sign Up</li></NavLink>
           </ul>
         </div>
         {this.props.children}

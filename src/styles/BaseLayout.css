@@ -35,12 +35,12 @@
   text-decoration: none;
 }
 .nav-ul a:hover {
-  color: #27ae60;
+  color: #16a085;
 }
 .login-signup {
   float: right;
 }
 footer {
   background-color: #16a085;
-  color: #ecf0f1;
+  color: #fff;
 }
