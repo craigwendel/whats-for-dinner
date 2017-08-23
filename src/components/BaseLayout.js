@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../styles/BaseLayout.css'
-import {NavLink} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import logo from '../images/wfd-icon.png'
 
 export default class BaseLayout extends Component {
@@ -21,6 +21,12 @@ export default class BaseLayout extends Component {
         </div>
         {this.props.children}
         <footer className='footer'>
+          <ul className='footer-ul'>
+            <img id='footer-logo' src={logo} alt='whats for dinner logo' />
+            <Link to='/contact'><li>Contact</li></Link>
+            <Link to='/contact'><li>About</li></Link>
+            <Link to='/legal'><li>Legal</li></Link>
+          </ul>
           <h4>© Copyright 2017 | Craig A Wendel</h4>
         </footer>
       </div>

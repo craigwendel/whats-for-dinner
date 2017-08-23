@@ -13,28 +13,44 @@
   float: left;
 }
 .sign-up-form {
-  width: 80%;
+  display: flex;
+  height: 30em;
+  align-items: center;
 }
-.sign-up-form h4 {
+.sign-up-form-data h4 {
   margin-top: 5%;
-  font-size: 2em;
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  color: #16a085;
+  text-shadow: 1px 1px #fff;
 }
-.sign-up-form label {
+.sign-up-form-data {
+  width: 90%;
+  margin-left: 10%;
+}
+.sign-up-form-data label {
   font-size: 1.5em;
-  margin-top: 2%
+  margin-top: 2%;
 }
-.sign-up-form input {
+.sign-up-form-data input {
   padding: 1%;
   font-size: 1.25em;
   border-radius: 10px;
   margin: 2% 0% 0% 2%;
+  width: 50%;
 }
-#submit {
+input#submit {
   background-color: #16a085;
   font-size: 1.5em;
   color: #fff;
   padding: 2%;
+  width: 20%;
+  text-align: center;
   border: none;
   border-radius: 10px;
   margin-bottom: 5%;
+}
+.form-image img {
+  height: 55vh;
+  margin-left: 5%;
 }

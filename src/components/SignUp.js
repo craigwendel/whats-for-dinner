@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import pizza from '../images/pizza.jpg'
 import dinner from '../images/salad-dinner.jpeg'
 
 export default class SignUp extends Component {
@@ -47,9 +48,12 @@ export default class SignUp extends Component {
         </div>
         <div className='banner-img' style={{backgroundImage: `url(${dinner})`, backgroundSize: 'cover', backgroundPosition: 'center top', width: '100%', height: '30vh'}} />
         <div className='sign-up-form'>
+          <div className='form-image'>
+            <img src={pizza} alt='pizza slice with vegatables surrounding it' />
+          </div>
           <form className='sign-up-form-data' onSubmit={this.handleSubmit}>
             <div>
-              <h4>Fill out the form below to sign up for What's For Dinner</h4>
+              <h4>Sign Up to get cooking!</h4>
             </div>
             <div>
               <label>Full Name:</label>
@@ -61,11 +65,11 @@ export default class SignUp extends Component {
             </div>
             <div>
               <label>Username:</label>
-              <input type='text' onChange={this.handleUsernameChange} value={this.state.username} placeholder='Your Username' />
+              <input type='text' onChange={this.handleUsernameChange} value={this.state.username} placeholder='Create a Username' />
             </div>
             <div>
               <label>Password:</label>
-              <input type='password' onChange={this.handlePasswordChange} value={this.state.password} placeholder='Enter a password' />
+              <input type='password' onChange={this.handlePasswordChange} value={this.state.password} placeholder='8 characters or more' />
             </div>
             <div>
               <input type='submit' id='submit' value='Submit' />

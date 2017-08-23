@@ -40,7 +40,27 @@
 .login-signup {
   float: right;
 }
-footer {
+.footer {
   background-color: #16a085;
+  color: #fff;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-ul {
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+.footer-ul a {
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+}
+img#footer-logo {
+  width: 8vh;
   color: #fff;
 }
