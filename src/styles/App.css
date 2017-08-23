@@ -1,4 +1,15 @@
-h1 {
-  font-family: 'Lobster', cursive;
+.hero-text h1 {
+  font-size: 3em;
   color: #16a085;
+  background-color: #fff;
+  float: right;
+  width: 40%;
+  margin: 10% 5% 0% 0%;
+  padding: 3%;
+  border-radius: 10px;
 }
+/*.hero-text h2 {
+  font-size: 2.5em;
+  color: #7f8c8d;
+
+}*/
