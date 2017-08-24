@@ -18,6 +18,25 @@ class App extends Component {
           </div>
           <div id='hero' style={{backgroundImage: `url(${hero})`, backgroundSize: 'cover', width: '100%', height: '100vh'}} />
         </header>
+        <section>
+          <div className='wfd-steps'>
+            <div className='step-details'>
+              <i className='fa fa-search' aria-hidden='true' />
+              <h5>Find your Meal!</h5>
+              <p>Search for recipes based off of the ingredients you have at home. No need to run to the store, we search for recipes that you can make right now!</p>
+            </div>
+            <div className='step-details'>
+              <i className='fa fa-fire' aria-hidden='true' />
+              <h5>Get Cooking!</h5>
+              <p>Pick out the perfect recipe and get cooking!  We provide step by step instructions to prepare the perfect meal!</p>
+            </div>
+            <div className='step-details'>
+              <i className='fa fa-cutlery' aria-hidden='true' />
+              <h5>Dig In!</h5>
+              <p>Enjoy your deliciously preparted meal. It's that simple with the What's For Dinner? app!</p>
+            </div>
+          </div>
+        </section>
       </div>
     )
   }

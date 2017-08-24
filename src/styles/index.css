@@ -6,7 +6,7 @@
 }
 
 .sign-up-text h3 {
-  padding: 5% 0% 0% 5%;
+  padding: 10% 0% 0% 5%;
   font-size: 3em;
   color: #fff;
   text-shadow: 2px 2px #000;
@@ -22,7 +22,7 @@
   font-family: 'Lobster', cursive;
   font-size: 3em;
   color: #16a085;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px #000;
 }
 .sign-up-form-data {
   width: 90%;
@@ -40,7 +40,7 @@
   width: 50%;
 }
 input#submit {
-  background-color: #16a085;
+  background-color: #e74c3c;
   font-size: 1.5em;
   color: #fff;
   padding: 2%;
@@ -49,6 +49,10 @@ input#submit {
   border: none;
   border-radius: 10px;
   margin-bottom: 5%;
+}
+input#submit:hover {
+  background-color: #c0392b;
+  cursor: pointer;
 }
 .form-image img {
   height: 55vh;

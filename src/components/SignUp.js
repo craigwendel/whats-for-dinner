@@ -46,7 +46,7 @@ export default class SignUp extends Component {
         <div className='sign-up-text'>
           <h3>Sign Up</h3>
         </div>
-        <div className='banner-img' style={{backgroundImage: `url(${dinner})`, backgroundSize: 'cover', backgroundPosition: 'center top', width: '100%', height: '30vh'}} />
+        <div className='banner-img' style={{backgroundImage: `url(${dinner})`, backgroundSize: 'cover', backgroundPosition: 'center top', width: '100%', height: '40vh'}} />
         <div className='sign-up-form'>
           <div className='form-image'>
             <img src={pizza} alt='pizza slice with vegatables surrounding it' />
