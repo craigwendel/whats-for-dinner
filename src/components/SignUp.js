@@ -43,15 +43,12 @@ export default class SignUp extends Component {
   render () {
     return (
       <div className='sign-up'>
-        <div className='sign-up-text'>
+        <div className='banner-text'>
           <h3>Sign Up</h3>
         </div>
         <div className='banner-img' style={{backgroundImage: `url(${dinner})`, backgroundSize: 'cover', backgroundPosition: 'center top', width: '100%', height: '40vh'}} />
         <div className='sign-up-form'>
-          <div className='form-image'>
-            <img src={pizza} alt='pizza slice with vegatables surrounding it' />
-          </div>
-          <form className='sign-up-form-data' onSubmit={this.handleSubmit}>
+          <form className='form-data' onSubmit={this.handleSubmit}>
             <div>
               <h4>Sign Up to get cooking!</h4>
             </div>
@@ -75,6 +72,9 @@ export default class SignUp extends Component {
               <input type='submit' id='submit' value='Submit' />
             </div>
           </form>
+          <div className='form-image'>
+            <img src={pizza} alt='pizza slice with vegatables surrounding it' />
+          </div>
         </div>
       </div>
     )

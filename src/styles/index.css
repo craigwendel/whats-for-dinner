@@ -5,7 +5,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-.sign-up-text h3 {
+.banner-text h3 {
   padding: 10% 0% 0% 5%;
   font-size: 3em;
   color: #fff;
@@ -17,27 +17,28 @@
   height: 30em;
   align-items: center;
 }
-.sign-up-form-data h4 {
+.form-data h4 {
   margin-top: 5%;
   font-family: 'Lobster', cursive;
   font-size: 3em;
   color: #16a085;
   text-shadow: 1px 1px #000;
 }
-.sign-up-form-data {
-  width: 90%;
-  margin-left: 10%;
+.form-data {
+  width: 100%;
+  margin: 0% 3%;
+  flex-basis: 42%;
 }
-.sign-up-form-data label {
+.form-data label {
   font-size: 1.5em;
   margin-top: 2%;
 }
-.sign-up-form-data input {
+.form-data input {
   padding: 1%;
   font-size: 1.25em;
   border-radius: 10px;
   margin: 2% 0% 0% 2%;
-  width: 50%;
+  width: 65%;
 }
 input#submit {
   background-color: #e74c3c;
@@ -56,5 +57,12 @@ input#submit:hover {
 }
 .form-image img {
   height: 55vh;
-  margin-left: 5%;
+  margin: 0% 3%;
+  flex-basis: 42%;
+}
+.login-form {
+  display: flex;
+  height: 30em;
+  align-items: center;
+  flex-basis: 50%;
 }

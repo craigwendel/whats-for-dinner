@@ -8,6 +8,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import App from './components/App'
 import BaseLayout from './components/BaseLayout'
 import SignUp from './components/SignUp'
+import Login from './components/Login'
 
 ReactDOM.render(
 
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path='/' component={App} />
         <Route path='/signup' component={SignUp} />
+        <Route path='/login' component={Login} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>
