@@ -40,6 +40,9 @@
   margin: 2% 0% 0% 2%;
   width: 65%;
 }
+.fa-lock {
+  font-size: 1em;
+}
 input#submit {
   background-color: #e74c3c;
   font-size: 1.5em;

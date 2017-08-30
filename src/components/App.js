@@ -38,7 +38,7 @@ class App extends Component {
             <div className='step-details'>
               <i className='fa fa-cutlery' aria-hidden='true' />
               <h5>Dig In!</h5>
-              <p>Enjoy your deliciously preparted meal. It's that simple with the What's For Dinner? app!</p>
+              <p>Enjoy your deliciously prepared meal. It's that simple with the What's For Dinner? app!</p>
             </div>
           </div>
         </main>

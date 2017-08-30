@@ -38,7 +38,7 @@ export default class Login extends Component {
         <div className='login-form'>
           <form className='form-data' onSubmit={this.handleLogin}>
             <div>
-              <h4>Log In to your account</h4>
+              <h4>Log In to your account:</h4>
             </div>
             <div>
               <label>Username:</label>
@@ -53,7 +53,7 @@ export default class Login extends Component {
             </div>
           </form>
           <div className='form-image'>
-            <img src={spaghetti} alt='pizza slice with vegatables surrounding it' />
+            <img src={spaghetti} alt='bowl of spaghetti with marinara sauce' />
           </div>
         </div>
       </div>
