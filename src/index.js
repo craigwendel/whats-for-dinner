@@ -9,7 +9,7 @@ import App from './components/App'
 import BaseLayout from './components/BaseLayout'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
-import Recipes from './components/Recipes'
+import RecipeSearch from './components/RecipeSearch'
 
 ReactDOM.render(
 
@@ -19,7 +19,7 @@ ReactDOM.render(
         <Route exact path='/' component={App} />
         <Route path='/signup' component={SignUp} />
         <Route path='/login' component={Login} />
-        <Route path='/recipes' component={Recipes} />
+        <Route path='/recipes' component={RecipeSearch} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>
