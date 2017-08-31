@@ -69,7 +69,6 @@ input#submit:hover {
 .recipe-search {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .search-details h4 {
   text-align: center;
@@ -105,13 +104,28 @@ input#submit:hover {
   .recipe-results {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     justify-content: space-around;
+  }
+  .recipe-map {
+    flex-basis: 24%;
+    margin-left: 1%;
   }
   .recipe-details img {
     height: 40vh;
     width: 23vw;
+    margin: 3% 0%;
   }
-  .recipe-details {
+  .recipe-details a {
     font-size: 1.25em;
+    color: #16a085;
+    text-decoration: none;
+  }
+  .recipe-details a:hover {
+    color: #1abc9c;
+    cursor: pointer;
+  }
+  .recipe-details h5 {
+    font-size: 1.25em;
+    color: #e74c3c;
+    margin-bottom: 5%;
   }

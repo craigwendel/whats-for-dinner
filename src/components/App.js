@@ -16,7 +16,7 @@ class App extends Component {
             <h1>You select the ingredients you have on hand...</h1>
             <h2>and we show you recipes you can make!</h2>
             <div className='button-links'>
-              <Link to='/search'><button>Search Recipes</button></Link>
+              <Link to='/recipes'><button>Search Recipes</button></Link>
               <Link to='/login'><button id='second-btn'>Log In </button></Link>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default class RecipeResults extends Component {
           <div className='recipe-map' key={recipe.recipe_id}>
             <ul className='recipe-details'>
               <img src={recipe.image_url} alt='' />
-              <h4>{recipe.title}</h4>
+              <h4><a href={recipe.source_url} target='_blank'>{recipe.title}</a></h4>
               <h5>Rating: {Math.round(recipe.social_rank)}</h5>
             </ul>
           </div>
