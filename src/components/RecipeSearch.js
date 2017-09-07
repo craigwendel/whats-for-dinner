@@ -23,7 +23,13 @@ export default class RecipeSearch extends Component {
     this.setState({ingredients: this.state.ingredients})
     let ingredients = this.state.ingredients
     let recipeUrl = `http://food2fork.com/api/search?key=${API_KEY}&q=${ingredients}&sort=r`
-    fetch(recipeUrl)
+    fetch(recipeUrl, {
+      method: 'GET',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'content-type': 'application/json'
+      }
+    })
     .then(response => response.json())
     .then(responseData => {
       this.setState({recipes: responseData.recipes})
