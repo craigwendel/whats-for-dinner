@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import RecipeInfoModal from './RecipeInfoModal'
 
 export default class RecipeResults extends Component {
   render () {
@@ -10,6 +11,7 @@ export default class RecipeResults extends Component {
               <img src={recipe.image_url} alt='' />
               <h4><a href={recipe.source_url} target='_blank'>{recipe.title}</a></h4>
               <h5>Rating: {Math.round(recipe.social_rank)}</h5>
+              <RecipeInfoModal />
             </ul>
           </div>
       )}

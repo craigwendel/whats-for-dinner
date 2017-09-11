@@ -5,7 +5,7 @@ import './styles/index.css'
 import registerServiceWorker from './registerServiceWorker'
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import App from './components/App'
+import Homepage from './components/Homepage'
 import BaseLayout from './components/BaseLayout'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
@@ -16,7 +16,7 @@ ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
-        <Route exact path='/' component={App} />
+        <Route exact path='/' component={Homepage} />
         <Route path='/signup' component={SignUp} />
         <Route path='/login' component={Login} />
         <Route path='/recipes' component={RecipeSearch} />

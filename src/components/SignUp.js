@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+// import {connect} from 'react-redux'
+// import {Link, Redirect} from 'react-router-dom'
 import pizza from '../images/pizza.jpg'
 import dinner from '../images/salad-dinner.jpeg'
 
@@ -9,7 +11,8 @@ export default class SignUp extends Component {
       name: '',
       email: '',
       username: '',
-      password: ''
+      password: '',
+      redirect: false
     }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -32,12 +35,25 @@ export default class SignUp extends Component {
   }
   handleSubmit (event) {
     event.preventDefault()
-    this.setState({
-      name: '',
-      email: '',
-      username: '',
-      password: ''
-    })
+
+// fetch('http://localhost:8000/api/', {
+//   method: 'POST',
+//   body: JSON.stringify({
+//     username: this.state.username,
+//     password: this.state.password
+//   }),
+//   headers: {
+//     'content-type': 'application/json'
+//   }
+// })
+// .then(response => response.json())
+// .then(json => {
+//   const username = json.username
+//   const token = json.token
+//   this.props.dispatch({type: 'AUTH', username, token})
+//   // HOW TO GET OVER TO /register
+//   this.setState({redirect: true})
+// })
   }
 
   render () {
@@ -80,3 +96,11 @@ export default class SignUp extends Component {
     )
   }
 }
+
+// const mapStateToProps = state => {
+//   return {
+//
+//   }
+// }
+//
+// export default connect(mapStateToProps)(SignUp)
