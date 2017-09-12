@@ -144,9 +144,9 @@ button:hover {
   cursor: pointer;
 }
 div.modal-0-2.modal {
-  padding: 4.4em;
+  padding: 1em;
   position: relative;
-  max-width: 800px;
+  max-width: 80%;
   box-shadow: 2px 2px #000;
   top: 50%;
   transform: translateY(-50%);
