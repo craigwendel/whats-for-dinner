@@ -5,7 +5,8 @@ export default class RecipeInfoModal extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      open: false
+      open: false,
+      recipe: this.props.recipeURL
     }
 
     this.onOpenModal = this.onOpenModal.bind(this)
@@ -25,7 +26,7 @@ export default class RecipeInfoModal extends Component {
       <div className='recipe-info-modal'>
         <button onClick={this.onOpenModal}>More Info</button>
         <Modal open={open} onClose={this.onCloseModal} modalClassName='modal'>
-          <iframe src='http://food2fork.com/view/To_Die_For_Blueberry_Muffins/32745' width='1000' height='550'></iframe>
+          <iframe src={this.state.recipe} width='1000' height='550' title='modal-info' />
         </Modal>
       </div>
     )
