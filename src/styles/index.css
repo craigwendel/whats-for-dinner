@@ -77,7 +77,6 @@ input#submit:hover {
   color: #16a085;
   text-shadow: 1px 1px #000;
   margin-top: 3%;
-
 }
 .search-details textarea {
   font-size: 1.5em;
@@ -150,4 +149,45 @@ div.modal-0-2.modal {
   box-shadow: 2px 2px #000;
   top: 50%;
   transform: translateY(-50%);
+}
+.menu-heading h4 {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  color: #16a085;
+  text-shadow: 1px 1px #000;
+  margin-top: 2%;
+}
+.days-of-week {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.days-of-week div{
+  width: 90%;
+  margin: 3% 1%;
+}
+.individual-days {
+  flex-basis: 14%;
+}
+.individual-meals {
+  display: flex;
+  flex-direction: column;
+}
+div.individual-days {
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 1px 1px #000;
+}
+.days-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+div.meal-times {
+  border: 1px solid #000;
+  margin: 5%;
+  padding: 10%;
+  font-size: 1.25em;
 }
