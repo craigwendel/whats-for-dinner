@@ -14,7 +14,7 @@ export default class RecipeResults extends Component {
               <h5>Rating: {Math.round(recipe.social_rank)}</h5>
               <div className='button-flex'>
                 <RecipeInfoModal recipeURL={recipe.f2f_url} />
-                <MealPlanModal />
+                <MealPlanModal recipeName={recipe.title} />
               </div>
             </ul>
           </div>
