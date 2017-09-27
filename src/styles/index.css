@@ -133,10 +133,25 @@ button:hover {
   font-size: 1em;
   color: #fff;
   padding: 2%;
-  width: 30%;
+  width: 99%;
   text-align: center;
   border: none;
   border-radius: 10px;
+}
+.meal-plan-modal button {
+  background-color: #16a085;
+  font-size: 1em;
+  color: #fff;
+  padding: 2%;
+  width: 99%;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+}
+.button-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .recipe-info-modal button:hover {
   background: #1abc9c;
