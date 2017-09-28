@@ -9,7 +9,8 @@ export default class RecipeSearch extends Component {
     super(props)
     this.state = {
       ingredients: '',
-      recipes: []
+      recipes: [],
+      searching: false
     }
     this.handleRecipeChange = this.handleRecipeChange.bind(this)
     this.handleRecipeSearch = this.handleRecipeSearch.bind(this)
@@ -25,17 +26,21 @@ export default class RecipeSearch extends Component {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const recipeUrl = `http://food2fork.com/api/search?key=${API_KEY}&q=${ingredients}&sort=r`
     fetch(proxyUrl + recipeUrl)
+    .then(this.setState({searching: true}))
     .then(response => response.json())
     .then(responseData => {
       this.setState({recipes: responseData.recipes})
       console.log(responseData.recipes)
     })
+    .then(this.setState({searching: false}))
     .catch((error) => {
       console.log('Fetching error:', error)
     })
   }
 
   render () {
+    const isSearching = this.state.searching
+    console.log(isSearching)
     return (
       <div className='recipes'>
         <div className='banner-text'>
@@ -51,6 +56,9 @@ export default class RecipeSearch extends Component {
           </div>
           <div className='search-details'>
             <button onClick={this.handleRecipeSearch}>Search Recipes</button>
+          </div>
+          <div className='searching'>
+            {isSearching ? <span className='sr-only'>Loading...<i className='fa fa-circle-o-notch fa-spin fa-3x fa-fw'></i></span> : null}
           </div>
           <div className='search-results'>
             <RecipeResults recipes={this.state.recipes} />

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import '../styles/Homepage.css'
-import hero from '../images/heroimg.jpeg'
-import foodSalad from '../images/food-salad.jpg'
 import heather from '../images/heatherg.jpg'
 import john from '../images/johnf.png'
 import sue from '../images/sueh.jpg'
@@ -20,8 +18,7 @@ export default class Homepage extends Component {
               <Link to='/login'><button id='second-btn'>Log In </button></Link>
             </div>
           </div>
-          <div id='hero' style={{backgroundImage: `url(${hero})`, backgroundSize: 'cover', width: '100%', height: '100vh'}}>
-          </div>
+          <div id='hero' />
         </header>
         <main>
           <div className='wfd-steps'>
@@ -44,7 +41,7 @@ export default class Homepage extends Component {
         </main>
         <section>
           <div className='reviews'>
-            <div id='review-image' style={{backgroundImage: `url(${foodSalad})`, backgroundSize: 'cover', width: '100%', height: '110vh', zIndex: '-1'}}>
+            <div id='review-image'>
               <h3>What others are saying:</h3>
               <div className='all-reviews'>
                 <div className='review-details'>
