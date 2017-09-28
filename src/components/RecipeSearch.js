@@ -21,18 +21,15 @@ export default class RecipeSearch extends Component {
   }
 
   handleRecipeSearch () {
-    this.setState({ingredients: this.state.ingredients})
     let ingredients = this.state.ingredients
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const recipeUrl = `http://food2fork.com/api/search?key=${API_KEY}&q=${ingredients}&sort=r`
+    this.setState({searching: true})
     fetch(proxyUrl + recipeUrl)
-    .then(this.setState({searching: true}))
     .then(response => response.json())
     .then(responseData => {
-      this.setState({recipes: responseData.recipes})
-      console.log(responseData.recipes)
+      this.setState({recipes: responseData.recipes, searching: false})
     })
-    .then(this.setState({searching: false}))
     .catch((error) => {
       console.log('Fetching error:', error)
     })
@@ -58,7 +55,9 @@ export default class RecipeSearch extends Component {
             <button onClick={this.handleRecipeSearch}>Search Recipes</button>
           </div>
           <div className='searching'>
-            {isSearching ? <span className='sr-only'>Loading...<i className='fa fa-circle-o-notch fa-spin fa-3x fa-fw'></i></span> : null}
+            {isSearching &&
+              <span><i className='fa fa-circle-o-notch fa-spin fa-3x fa-fw' /> Searching...</span>
+            }
           </div>
           <div className='search-results'>
             <RecipeResults recipes={this.state.recipes} />

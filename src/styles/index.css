@@ -100,6 +100,17 @@ button:hover {
   background-color: #c0392b;
   cursor: pointer;
 }
+.searching {
+  margin-bottom: 3%;
+}
+.searching span {
+  font-size: 2em;
+  color: #16a085;
+}
+.searching i {
+  font-size: 2em;
+  color: #16a085;
+}
 .recipe-results {
   display: flex;
   flex-wrap: wrap;
@@ -128,32 +139,19 @@ button:hover {
   color: #e74c3c;
   margin-bottom: 5%;
 }
-.recipe-info-modal button {
+.button-flex button {
   background-color: #16a085;
   font-size: 1em;
   color: #fff;
   padding: 2%;
-  width: 99%;
+  width: 45%;
   text-align: center;
   border: none;
   border-radius: 10px;
+  float: left;
+  margin: 0% 1% 0% 1%;
 }
-.meal-plan-modal button {
-  background-color: #16a085;
-  font-size: 1em;
-  color: #fff;
-  padding: 2%;
-  width: 99%;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-}
-.button-flex {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.recipe-info-modal button:hover {
+.button-flex button:hover {
   background: #1abc9c;
   cursor: pointer;
 }
@@ -238,4 +236,36 @@ strong {
   border: none;
   border-radius: 10px;
   margin-top: 4%;
+}
+
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .search-details textarea {
+    margin: 3%;
+    width: 94%;
+  }
+  .recipe-map {
+    flex-basis: 45%;
+  }
+  .recipe-details img {
+    width: 45vw;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 499px) {
+  .recipe-results {
+    flex-direction: column;
+    align-content: center;
+  }
+  .recipe-details img {
+    width: 94vw;
+    height: 47vh;
+  }
+  .recipe-map {
+    margin-left: 3%;
+  }
+  .search-details textarea {
+    margin: 2% 3%;
+    width: 94%;
+  }
 }
