@@ -37,12 +37,12 @@ div.wide-div {
   width: 80%;
 }
 .wide-div a {
-  list-style: none;
   color: #7f8c8d;
   text-decoration: none;
 }
 .wide-div a:hover {
   color: #16a085;
+  cursor: auto;
 }
 div#main-nav-mobile .narrow-links {
   display: none;
@@ -51,11 +51,11 @@ div#main-nav-mobile .narrow-links {
   text-decoration: none;
   display: block;
   clear: left;
-  color: #e74c3c;
+  color: #7f8c8d;
   padding: 0.5em 0;
 }
 #main-nav-mobile .narrow-links a:hover {
-color: #c0392b;
+color: #16a085;
 cursor: auto;
 }
 #main-nav-mobile i {
@@ -73,6 +73,7 @@ cursor: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 3%;
 }
 .footer-ul {
   height: 5em;

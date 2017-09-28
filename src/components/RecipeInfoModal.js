@@ -26,7 +26,7 @@ export default class RecipeInfoModal extends Component {
       <div className='recipe-info-modal'>
         <button onClick={this.onOpenModal}>More Info</button>
         <Modal open={open} onClose={this.onCloseModal} modalClassName='modal'>
-          <iframe src={this.state.recipe} width='1000' height='550' title='modal-info' />
+          <iframe src={this.state.recipe} title='modal-info' />
         </Modal>
       </div>
     )
