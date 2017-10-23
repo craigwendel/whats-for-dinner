@@ -1,4 +1,4 @@
-#main-nav {
+#main-nav-desktop {
   height: 5em;
   background-color: #fff;
   display: flex;
@@ -73,7 +73,6 @@ cursor: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3%;
 }
 .footer-ul {
   height: 5em;

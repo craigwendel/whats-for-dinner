@@ -8,7 +8,8 @@ export default class MealPlanModal extends Component {
       open: false,
       recipeName: this.props.recipeName,
       date: 'monday',
-      mealTime: 'breakfast'
+      mealTime: 'breakfast',
+      message: 'Submit'
     }
 
     this.onOpenModal = this.onOpenModal.bind(this)
@@ -32,10 +33,12 @@ export default class MealPlanModal extends Component {
   }
   handleSubmit (event) {
     event.preventDefault()
+    this.setState({date: event.target.value, mealTime: event.target.value, message: 'Added to Menu'})
   }
 
   render () {
     const {open} = this.state
+
     return (
       <div className='meal-plan-modal'>
         <button onClick={this.onOpenModal}>Add to Meal Plan</button>
@@ -58,7 +61,7 @@ export default class MealPlanModal extends Component {
               <option value='lunch'>Lunch</option>
               <option value='dinner'>Dinner</option>
             </select>
-            <input type='submit' value='Submit' id='form-submit' />
+            <input type='submit' value={this.state.message} id='form-submit' />
           </form>
         </Modal>
       </div>

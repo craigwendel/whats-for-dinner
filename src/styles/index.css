@@ -99,7 +99,7 @@ button:hover {
   cursor: pointer;
 }
 .searching {
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 .searching span {
   font-size: 2em;
@@ -108,6 +108,13 @@ button:hover {
 .searching i {
   font-size: 2em;
   color: #16a085;
+}
+.recipe-count h4 {
+  font-size: 2em;
+  color: #16a085;
+}
+.recipe-count {
+  margin-bottom: 1%;
 }
 .recipe-results {
   display: flex;
@@ -162,8 +169,8 @@ div.modal-0-2.modal {
   transform: translateY(-50%);
 }
 iframe {
-  width: 1000px;
-  height: 550px;
+  width: 800px;
+  height: 480px;
 }
 .menu-heading h4 {
   text-align: center;

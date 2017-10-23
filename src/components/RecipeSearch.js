@@ -10,7 +10,8 @@ export default class RecipeSearch extends Component {
     this.state = {
       ingredients: '',
       recipes: [],
-      searching: false
+      searching: false,
+      count: ''
     }
     this.handleRecipeChange = this.handleRecipeChange.bind(this)
     this.handleRecipeSearch = this.handleRecipeSearch.bind(this)
@@ -28,7 +29,8 @@ export default class RecipeSearch extends Component {
     fetch(proxyUrl + recipeUrl)
     .then(response => response.json())
     .then(responseData => {
-      this.setState({recipes: responseData.recipes, searching: false})
+      this.setState({recipes: responseData.recipes, count: responseData.count, searching: false})
+      console.log(this.state.recipes)
     })
     .catch((error) => {
       console.log('Fetching error:', error)
@@ -37,7 +39,6 @@ export default class RecipeSearch extends Component {
 
   render () {
     const isSearching = this.state.searching
-    console.log(isSearching)
     return (
       <div className='recipes'>
         <div className='banner-text'>
@@ -56,7 +57,7 @@ export default class RecipeSearch extends Component {
           </div>
           <div className='searching'>
             {isSearching &&
-              <span><i className='fa fa-circle-o-notch fa-spin fa-3x fa-fw' /> Searching...</span>
+              <span>Searching<i className='fa fa-spinner fa-pulse fa-3x fa-fw' /></span>
             }
           </div>
           <div className='search-results'>
