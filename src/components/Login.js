@@ -28,7 +28,7 @@ export default class Login extends Component {
   handleLogin (event) {
     this.setState({message: ''})
     event.preventDefault()
-    fetch(`${process.env.REACT_APP_API_SERVER}/api/authenticate`, {
+    fetch('https://whats-for-dinner-api.herokuapp.com/api/authenticate', {
       method: 'POST',
       body: JSON.stringify({
         username: this.state.username,

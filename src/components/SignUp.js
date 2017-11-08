@@ -34,7 +34,7 @@ export default class SignUp extends Component {
   }
   handleSubmit (event) {
     event.preventDefault()
-    fetch(`${process.env.REACT_APP_API_SERVER}/api/register`, {
+    fetch('https://whats-for-dinner-api.herokuapp.com/api/register', {
       method: 'POST',
       body: JSON.stringify({
         name: this.state.name,

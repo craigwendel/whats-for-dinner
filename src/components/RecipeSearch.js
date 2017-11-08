@@ -37,6 +37,24 @@ export default class RecipeSearch extends Component {
     })
   }
 
+  //   let ingredients = this.state.ingredients
+  //   this.setState({searching: true})
+  //   fetch(`${process.env.REACT_APP_API_SERVER}/http://food2fork.com/api/search?key=${API_KEY}=${ingredients}&sort=r`, {
+  //     method: 'GET',
+  //     headers: {
+  //       'content-type': 'application/json'
+  //     }
+  //   })
+  // .then(response => response.json())
+  // .then(responseData => {
+  //   this.setState({recipes: responseData.recipes, count: responseData.count, searching: false})
+  //   console.log(this.state.recipes)
+  // })
+  // .catch((error) => {
+  //   console.log('Fetching error:', error)
+  // })
+  // }
+
   render () {
     const isSearching = this.state.searching
     return (
