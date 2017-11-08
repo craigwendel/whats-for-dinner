@@ -43,7 +43,9 @@ export default class BaseLayout extends Component {
             <NavLink to='/login' activeStyle={{color: '#16a085'}}>Log In</NavLink>
           </div>
         </div>
+
         {this.props.children}
+
         <footer className='footer'>
           <ul className='footer-ul'>
             <img id='footer-logo' src={whiteLogo} alt='whats for dinner logo' />

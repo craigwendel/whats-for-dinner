@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import localStorage from 'local-storage'
+import {Redirect} from 'react-router-dom'
 import vegetables from '../images/vegetables.jpeg'
 import spaghetti from '../images/spaghetti.jpg'
 
@@ -7,7 +9,10 @@ export default class Login extends Component {
     super(props)
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      token: null,
+      redirect: '',
+      message: ''
     }
     this.handleUsernameChange = this.handleUsernameChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
@@ -21,14 +26,42 @@ export default class Login extends Component {
     this.setState({password: event.target.value})
   }
   handleLogin (event) {
+    this.setState({message: ''})
     event.preventDefault()
-    this.setState({
-      username: '',
-      password: ''
+    fetch(`${process.env.REACT_APP_API_SERVER}/api/authenticate`, {
+      method: 'POST',
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password
+      }),
+      headers: {
+        'content-type': 'application/json'
+      }
     })
+      .then(r => r.json())
+      .then(json => {
+        console.log('User is logged in', json)
+        if (json.success) {
+          localStorage.set('JWT', json.token)
+          this.setState({redirect: true})
+        } else {
+          this.setState({message: json.message})
+        }
+      })
   }
-
   render () {
+    if (this.state.redirect) {
+      return <Redirect to='/recipes' />
+    }
+    let errorStyling = ''
+    let errorDiv = ''
+    if (this.state.message) {
+      errorStyling = 'errorStyling'
+      errorDiv = (
+        <div className='loginError'>{this.state.message}</div>
+      )
+    }
+
     return (
       <div className='login'>
         <div className='banner-text'>
@@ -39,14 +72,15 @@ export default class Login extends Component {
           <form className='form-data' onSubmit={this.handleLogin}>
             <div>
               <h4>Log In to your account:</h4>
+              {errorDiv}
             </div>
             <div>
               <label>Username:</label>
-              <input type='text' onChange={this.handleUsernameChange} value={this.state.username} placeholder='Your Username' />
+              <input type='text' className={errorStyling} onChange={this.handleUsernameChange} value={this.state.username} placeholder='Your Username' />
             </div>
             <div>
               <label>Password:</label>
-              <input type='password' onChange={this.handlePasswordChange} value={this.state.password} placeholder='Enter your password' />
+              <input type='password' className={errorStyling} onChange={this.handlePasswordChange} value={this.state.password} placeholder='Enter your password' />
             </div>
             <div>
               <input type='submit' id='submit' value='Log In' />

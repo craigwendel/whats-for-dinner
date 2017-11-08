@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-// import {connect} from 'react-redux'
-// import {Link, Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import pizza from '../images/pizza.jpg'
 import dinner from '../images/salad-dinner.jpeg'
 
@@ -12,7 +11,7 @@ export default class SignUp extends Component {
       email: '',
       username: '',
       password: '',
-      redirect: false
+      registerSuccess: false
     }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -35,28 +34,39 @@ export default class SignUp extends Component {
   }
   handleSubmit (event) {
     event.preventDefault()
-
-// fetch('http://localhost:8000/api/', {
-//   method: 'POST',
-//   body: JSON.stringify({
-//     username: this.state.username,
-//     password: this.state.password
-//   }),
-//   headers: {
-//     'content-type': 'application/json'
-//   }
-// })
-// .then(response => response.json())
-// .then(json => {
-//   const username = json.username
-//   const token = json.token
-//   this.props.dispatch({type: 'AUTH', username, token})
-//   // HOW TO GET OVER TO /register
-//   this.setState({redirect: true})
-// })
+    fetch(`${process.env.REACT_APP_API_SERVER}/api/register`, {
+      method: 'POST',
+      body: JSON.stringify({
+        name: this.state.name,
+        email: this.state.email,
+        username: this.state.username,
+        password: this.state.password
+      }),
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+    .then(r => r.json())
+    .then(json => {
+      console.log(json)
+      if (json.status === 'success') {
+        console.log('User created!')
+        this.setState({
+          name: '',
+          email: '',
+          username: '',
+          password: '',
+          registerSuccess: true
+        })
+      }
+    })
   }
 
   render () {
+    if (this.state.registerSuccess === true) {
+      return <Redirect to='/login' />
+    }
+
     return (
       <div className='sign-up'>
         <div className='banner-text'>
@@ -96,11 +106,3 @@ export default class SignUp extends Component {
     )
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-//
-//   }
-// }
-//
-// export default connect(mapStateToProps)(SignUp)
