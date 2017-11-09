@@ -185,7 +185,7 @@ iframe {
   justify-content: space-between;
   align-content: center;
 }
-.days-of-week div{
+.days-of-week div {
   width: 90%;
   margin: 3% 1%;
 }
@@ -247,6 +247,7 @@ strong {
   margin-top: 4%;
 }
 
+/* ***********************************  MEDIA QUERIES *************************************** */
 
 @media (min-width: 500px) and (max-width: 767px) {
   .sign-up-form {
@@ -280,6 +281,10 @@ strong {
   iframe {
     width: 470px;
     height: 500px;
+  }
+  .days-of-week {
+    flex-direction: column;
+    align-items:  center
   }
 }
 
@@ -320,5 +325,12 @@ strong {
   iframe {
     width: 280px;
     height: 500px;
+  }
+  .menu-heading h4 {
+    font-size: 2.5em;
+  }
+  .days-of-week {
+    flex-direction: column;
+    align-items:  center
   }
 }

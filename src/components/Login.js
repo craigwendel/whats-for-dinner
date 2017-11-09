@@ -3,6 +3,7 @@ import localStorage from 'local-storage'
 import {Redirect} from 'react-router-dom'
 import vegetables from '../images/vegetables.jpeg'
 import spaghetti from '../images/spaghetti.jpg'
+// import NavBar from './NavBar'
 
 export default class Login extends Component {
   constructor (props) {
@@ -12,7 +13,8 @@ export default class Login extends Component {
       password: '',
       token: null,
       redirect: '',
-      message: ''
+      message: '',
+      isLoggedIn: false
     }
     this.handleUsernameChange = this.handleUsernameChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
@@ -43,7 +45,7 @@ export default class Login extends Component {
         console.log('User is logged in', json)
         if (json.success) {
           localStorage.set('JWT', json.token)
-          this.setState({redirect: true})
+          this.setState({redirect: true, isLoggedIn: true})
         } else {
           this.setState({message: json.message})
         }
@@ -64,6 +66,7 @@ export default class Login extends Component {
 
     return (
       <div className='login'>
+        {/* <NavBar isLoggedIn={this.state.isLoggedIn} /> */}
         <div className='banner-text'>
           <h3>Log In</h3>
         </div>
